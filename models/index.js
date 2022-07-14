@@ -1,5 +1,5 @@
-const language = require('../models/language');
-const module = require('../models/module');
-const user = require('../models/user');
+const Language = require('./language');
+const Module = require('./module');
+const User = require('./user');
 
-module.exports = { language, module, user };
+module.exports = { Language, Module, User };

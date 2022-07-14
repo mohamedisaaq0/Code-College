@@ -28,23 +28,23 @@ $(document).ready(function () {
     $('.menu-btn i').toggleClass('active');
   });
 
-  var typed = new Typed('.typing', {
-    strings: ['HTML', 'CSS', 'JavaScript', 'Express.js', 'SQL'],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
+  // var typed = new Typed('.typing', {
+  //   strings: ['HTML', 'CSS', 'JavaScript', 'Express.js', 'SQL'],
+  //   typeSpeed: 100,
+  //   backSpeed: 60,
+  //   loop: true,
+  // });
 
-  var typed = new Typed('.typing-2', {
-    strings: [
-      'learn new languages',
-      'track your progress',
-      'become an expert programmer',
-    ],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
+  // var typed = new Typed('.typing-2', {
+  //   strings: [
+  //     'learn new languages',
+  //     'track your progress',
+  //     'become an expert programmer',
+  //   ],
+  //   typeSpeed: 100,
+  //   backSpeed: 60,
+  //   loop: true,
+  // });
 
   $('.carousel').owlCarousel({
     margin: 20,
