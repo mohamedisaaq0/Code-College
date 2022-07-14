@@ -1,7 +1,6 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
-class modules extends Model {
-}
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+class modules extends Model {}
 
 modules.init({
   id: {
@@ -29,5 +28,6 @@ modules.init({
   freezeTableName: true,
   underscored: true,
   modelName: 'module',
-}
-);
+});
+
+module.exports = modules;

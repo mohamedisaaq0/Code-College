@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 class Languages extends Model {}
 Languages.init({
@@ -27,5 +27,6 @@ Languages.init({
   freezeTableName: true,
   underscored: true,
   modelName: 'language',
-}
-);
+});
+
+module.exports = Languages;
