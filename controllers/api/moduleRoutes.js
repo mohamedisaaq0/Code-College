@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Modules } = require('../../models');
+const { Module } = require('../../models');
 
 // get a specific module
 router.get('/:id', async (req, res) => {
   try {
-    const module = await Modules.findbyPK(req.params.id);
+    const module = await Module.findbyPK(req.params.id);
     const moduleData = module.get();
-    res.json(module);
+    res.json(moduleData);
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
