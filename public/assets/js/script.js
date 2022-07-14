@@ -36,8 +36,11 @@ $(document).ready(function () {
   });
 
   var typed = new Typed('.typing-2', {
-    // Add more to strings¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
-    strings: ['learn new languages', 'track your progress', 'ADD MORE!!!'],
+    strings: [
+      'learn new languages',
+      'track your progress',
+      'become an expert programmer',
+    ],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
