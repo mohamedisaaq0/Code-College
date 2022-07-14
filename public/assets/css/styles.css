@@ -260,7 +260,7 @@ section .title::after {
   transition: all 0.3s ease;
 }
 .about .about-content .right a:hover {
-  color: var(--yellow);
+  color: var(--blue);
   background: none;
 }
 
