@@ -1,3 +1,4 @@
+const { BOOLEAN } = require('sequelize');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 class modules extends Model {}
@@ -14,9 +15,8 @@ modules.init({
     allowNull: false,
   },
   progress: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.BOOLEAN,
     allowNull: false,
-    unique: true,
   },
 
   languageId: {
