@@ -13,12 +13,20 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// POST a new module
+// change the progress of a module
 router.put('/:id', async (req, res) => {
   try {
-    const module = await Modules.findbyPK(id);
+    const module = await Module.findbyPK(req.params.id);
+    module.progress = req.body.progress;
+    if (req.body.progress === 1) {
+      module.completed = true;
+    } else {
+      module.completed = false;
+    }
+    await module.save();
     res.json(module);
-  } catch (err) {
-    res.status(400).json(err);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
   }
 });
