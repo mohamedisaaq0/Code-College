@@ -1,27 +1,31 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-class modules extends Model {
-}
 
-modules.init({
+class Languages extends Model {}
+Languages.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
   },
-  title: {
+  name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  progress: {
-    type: DataTypes.FLOAT,
+  description: {
+    type: DataTypes.STRING,
     allowNull: false,
     unique: true,
   },
-
-  languageId: {
+  UserId: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-});
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'language',
+}
+);
