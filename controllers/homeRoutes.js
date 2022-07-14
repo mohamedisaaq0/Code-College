@@ -1,20 +1,34 @@
 const router = require('express').Router();
+const Langauges = require('../../models/Languages');
 
 router.get('/', async (req, res) => {
-  res.render('homepage');
+  try {
+    const languages = await Languages.findAll({
+      raw: true,
+    });
+    res.render('languages', { Languages });
+  } catch (error) {
+    ç;
+    res.status(500).json(error);
+  }
 });
 
-router.get('/login', async (req, res) => {
-  res.send(`<h1>this is the login page</h1>`);
+router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/language', async (req, res) => {
-  res.send(`<h1>this is the language page</h1>`);
-});
+router.get('/languages', async (req, res) => {
+  if (req.session.logged_in) {
+    const projects = await Languages.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+      raw: true,
+    });
 
-router.get('/user/:id', async (req, res) => {
-  res.send(`<h1>this is the my account</h1>`);
+    console.log('User languages', languages);
+    res.render('profile', { Languages });
+  } else {
+    res.redirect('/login');
+  }
 });
-
-module.exports = router;
