@@ -37,7 +37,7 @@ html {
 section {
   padding: 100px 0;
 }
-.max-width {
+.contact .max-width {
   max-width: 1300px;
   padding: 0 80px;
   margin: auto;
@@ -328,11 +328,11 @@ section .title::after {
 .languages .carousel .card:hover img {
   border-color: var(--white) f;
 }
-.owl-dots {
+.languages .owl-dots {
   text-align: center;
   margin-top: 20px;
 }
-.owl-dot {
+.languages .owl-dot {
   height: 13px;
   width: 13px;
   margin: 0 5px;
@@ -341,33 +341,33 @@ section .title::after {
   border: 2px solid var(--yellow) !important;
   transition: all 0.3s ease;
 }
-.owl-dot.active {
+.languages .owl-dot.active {
   width: 35px;
   border-radius: 14px;
 }
-.owl-dot.active,
-.owl-dot:hover {
+.languages .owl-dot.active,
+.languages .owl-dot:hover {
   background: var(--yellow) !important;
 }
 
 /* Contact Us */
 .contact {
-  color: var(--white) f;
-  background: var(--black);
+  color: var(--black) f;
+  background: var(--white);
 }
 .contact .title {
-  color: var(--white);
+  color: var(--black);
 }
 .contact .title::before {
-  background: var(--white) f;
+  background: var(--black) f;
 }
 .contact .title::after {
   content: 'The creators of this application';
-  color: var(--yellow);
-  background-color: var(--black);
+  color: var(--blue);
+  background-color: var(--white);
 }
 .contact .carousel .card {
-  background: var(--black);
+  background: var(--blue);
   border-radius: 6px;
   padding: 25px 35px;
   text-align: center;
@@ -378,10 +378,10 @@ section .title::after {
   color: var(--white);
 }
 .contact .carousel .card a:hover {
-  color: var(--black);
+  color: var(--yellow);
 }
 .contact .carousel .card:hover {
-  background: var(--yellow);
+  background: var(--black);
 }
 .contact .carousel .card .box {
   display: flex;
@@ -400,7 +400,7 @@ section .title::after {
   color: var(--white);
 }
 .contact .carousel .card .text:hover {
-  color: var(--black);
+  color: var(--yellow);
 }
 
 .contact .carousel .card img {
@@ -408,40 +408,42 @@ section .title::after {
   width: 300px;
   object-fit: cover;
   border-radius: 5%;
-  border: 5px solid var(--yellow);
+  border: 5px solid var(--black);
   transition: all 0.3s ease;
 }
 .contact .carousel .card:hover img {
-  border-color: var(--white) f;
+  border-color: var(--yellow);
 }
-.owl-dots {
+.contact .owl-dots {
   text-align: center;
   margin-top: 20px;
 }
-.owl-dot {
+.contact .owl-dot {
   height: 13px;
   width: 13px;
   margin: 0 5px;
   outline: none !important;
   border-radius: 50%;
-  border: 2px solid var(--yellow) !important;
+  border: 2px solid var(--blue) !important;
   transition: all 0.3s ease;
 }
-.owl-dot.active {
+.contact .owl-dot.active {
   width: 35px;
   border-radius: 14px;
 }
-.owl-dot.active,
-.owl-dot:hover {
-  background: var(--yellow) !important;
+.contact .owl-dot.active,
+.contact .owl-dot:hover {
+  background: var(--blue) !important;
 }
 
 /* Footer */
 footer {
   background: var(--black);
   padding: 15px 23px;
-  color: var(--white) f;
   text-align: center;
+}
+footer span {
+  color: var(--white);
 }
 footer span a {
   color: var(--yellow);
