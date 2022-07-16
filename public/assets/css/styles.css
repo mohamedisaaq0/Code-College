@@ -172,7 +172,7 @@ section .title::after {
 /* Home section */
 .home {
   display: flex;
-  background: url('../images/banner.jpeg') no-repeat center;
+  background: url('/public/assets/images/banner.jpeg') no-repeat center;
   height: 100vh;
   color: var(--white);
   min-height: 500px;
@@ -220,7 +220,7 @@ section .title::after {
   background: none;
 }
 
-/* About me */
+/* About Code College */
 .about .title::after {
   content: 'What we do';
 }
@@ -328,11 +328,11 @@ section .title::after {
 .languages .carousel .card:hover img {
   border-color: var(--white) f;
 }
-.owl-dots {
+.languages .owl-dots {
   text-align: center;
   margin-top: 20px;
 }
-.owl-dot {
+.languages .owl-dot {
   height: 13px;
   width: 13px;
   margin: 0 5px;
@@ -341,132 +341,108 @@ section .title::after {
   border: 2px solid var(--yellow) !important;
   transition: all 0.3s ease;
 }
-.owl-dot.active {
+.languages .owl-dot.active {
   width: 35px;
   border-radius: 14px;
 }
-.owl-dot.active,
-.owl-dot:hover {
+.languages .owl-dot.active,
+.languages .owl-dot:hover {
   background: var(--yellow) !important;
 }
 
-/* Contact Me */
+/* Contact Us */
+.contact {
+  color: var(--black) f;
+  background: var(--white);
+}
+.contact .title {
+  color: var(--black);
+}
+.contact .title::before {
+  background: var(--black) f;
+}
 .contact .title::after {
-  content: 'Please feel free to contact me';
+  content: 'The creators of this application';
+  color: var(--blue);
+  background-color: var(--white);
 }
-.contact .contact-content .column {
-  width: calc(50% - 30px);
-}
-.contact .contact-content .text {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.contact .contact-content .left p {
-  text-align: justify;
-}
-.contact .contact-content .left .icons {
-  margin: 10px 0;
-}
-.contact .contact-content .row {
-  display: flex;
-  height: 65px;
-  align-items: center;
-}
-.contact .contact-content .row .info {
-  margin-left: 30px;
-}
-.contact .contact-content .row i {
-  font-size: 25px;
-  color: var(--yellow);
-}
-.contact .contact-content .info .head {
-  font-weight: 500;
-}
-.contact .contact-content .info .sub-title {
-  color: #333;
-}
-.contact .right form .fields {
-  display: flex;
-}
-.contact .right form .field,
-.contact .right form .fields .field {
-  height: 45px;
-  width: 100%;
-  margin-bottom: 15px;
-}
-.contact .right form .textarea {
-  height: 80px;
-  width: 100%;
-}
-.contact .right form .name {
-  margin-right: 10px;
-}
-.contact .right form .field input,
-.contact .right form .textarea textarea {
-  height: 100%;
-  width: 100%;
-  border: 1px solid var(--lightgrey);
+.contact .carousel .card {
+  background: var(--blue);
   border-radius: 6px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 17px;
-  font-family: 'Poppins', sans-serif;
-  transition: all 0.3s ease;
-}
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus {
-  border-color: var(--darkgrey);
-}
-.contact .right form .textarea textarea {
-  padding-top: 10px;
-  resize: none;
-}
-.contact .right form .button-area {
-  display: flex;
-  align-items: center;
-}
-.right form .button-area button {
-  color: var(--white) f;
-  display: block;
-  width: 160px !important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: var(--yellow);
-  border: 2px solid var(--yellow);
-  transition: all 0.3s ease;
-}
-.right form .button-area button:hover {
-  color: var(--yellow);
-  background: none;
-}
-/* Footer */
-footer {
-  background: var(--black);
-  padding: 15px 23px;
-  color: var(--white) f;
+  padding: 25px 35px;
   text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
-footer span a {
+.contact .carousel .card a {
+  color: var(--white);
+}
+.contact .carousel .card a:hover {
   color: var(--yellow);
-  text-decoration: none;
 }
-footer span a:hover {
-  text-decoration: underline;
+.contact .carousel .card:hover {
+  background: var(--black);
+}
+.contact .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.contact .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+.contact .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+  color: var(--white);
+}
+.contact .carousel .card .text:hover {
+  color: var(--yellow);
 }
 
+.contact .carousel .card img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 5px solid var(--black);
+  transition: all 0.3s ease;
+}
+.contact .carousel .card:hover img {
+  border-color: var(--yellow);
+}
+.contact .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.contact .owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid var(--blue) !important;
+  transition: all 0.3s ease;
+}
+.contact .owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.contact .owl-dot.active,
+.contact .owl-dot:hover {
+  background: var(--blue) !important;
+}
+
+/*Registration forms*/
 body {
   margin: 0;
   font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial,
     sans-serif;
-  background: #3b4465;
+  /* background: #3b4465; */
 }
-
 .forms-section {
   display: flex;
   flex-direction: column;
@@ -474,27 +450,22 @@ body {
   align-items: center;
   background-color: var(--black);
 }
-
 .section-title {
   font-size: 32px;
   letter-spacing: 1px;
   color: #fff;
 }
-
 .forms {
   display: flex;
   align-items: flex-start;
   margin-top: 30px;
 }
-
 .form-wrapper {
   animation: hideLayer 0.3s ease-out forwards;
 }
-
 .form-wrapper.is-active {
   animation: showLayer 0.3s ease-in forwards;
 }
-
 @keyframes showLayer {
   50% {
     z-index: 1;
@@ -503,7 +474,6 @@ body {
     z-index: 1;
   }
 }
-
 @keyframes hideLayer {
   0% {
     z-index: 1;
@@ -512,7 +482,6 @@ body {
     z-index: 1;
   }
 }
-
 .switcher {
   position: relative;
   cursor: pointer;
@@ -531,17 +500,14 @@ body {
   transform: translateX(0);
   transition: all 0.3s ease-out;
 }
-
 .form-wrapper.is-active .switcher-login {
   color: #fff;
   transform: translateX(90px);
 }
-
 .form-wrapper.is-active .switcher-signup {
   color: #fff;
   transform: translateX(-90px);
 }
-
 .underline {
   position: absolute;
   bottom: -5px;
@@ -551,7 +517,6 @@ body {
   width: 100%;
   height: 2px;
 }
-
 .underline::before {
   content: '';
   position: absolute;
@@ -563,19 +528,15 @@ body {
   background-color: currentColor;
   transition: transform 0.2s ease-out;
 }
-
 .switcher-login .underline::before {
   transform: translateX(101%);
 }
-
 .switcher-signup .underline::before {
   transform: translateX(-101%);
 }
-
 .form-wrapper.is-active .underline::before {
   transform: translateX(0);
 }
-
 .form {
   overflow: hidden;
   min-width: 260px;
@@ -584,15 +545,12 @@ body {
   border-radius: 5px;
   transform-origin: top;
 }
-
 .form-login {
   animation: hideLogin 0.3s ease-out forwards;
 }
-
 .form-wrapper.is-active .form-login {
   animation: showLogin 0.3s ease-in forwards;
 }
-
 @keyframes showLogin {
   0% {
     background: #d7e7f1;
@@ -606,7 +564,6 @@ body {
     transform: translate(35%, -20px);
   }
 }
-
 @keyframes hideLogin {
   0% {
     background-color: #fff;
@@ -620,15 +577,12 @@ body {
     transform: translate(40%, 10px);
   }
 }
-
 .form-signup {
   animation: hideSignup 0.3s ease-out forwards;
 }
-
 .form-wrapper.is-active .form-signup {
   animation: showSignup 0.3s ease-in forwards;
 }
-
 @keyframes showSignup {
   0% {
     background: #d7e7f1;
@@ -642,7 +596,6 @@ body {
     transform: translate(-35%, -20px) scaleY(1);
   }
 }
-
 @keyframes hideSignup {
   0% {
     background-color: #fff;
@@ -656,7 +609,6 @@ body {
     transform: translate(-40%, 10px) scaleY(0.8);
   }
 }
-
 .form fieldset {
   position: relative;
   opacity: 0;
@@ -665,21 +617,17 @@ body {
   border: 0;
   transition: all 0.3s ease-out;
 }
-
 .form-login fieldset {
   transform: translateX(-50%);
 }
-
 .form-signup fieldset {
   transform: translateX(50%);
 }
-
 .form-wrapper.is-active fieldset {
   opacity: 1;
   transform: translateX(0);
   transition: opacity 0.4s ease-in, transform 0.35s ease-in;
 }
-
 .form legend {
   position: absolute;
   overflow: hidden;
@@ -687,16 +635,13 @@ body {
   height: 1px;
   clip: rect(0 0 0 0);
 }
-
 .input-block {
   margin-bottom: 20px;
 }
-
 .input-block label {
   font-size: 14px;
   color: #a1b4b4;
 }
-
 .input-block input {
   display: block;
   width: 100%;
@@ -710,7 +655,6 @@ body {
   border: 1px solid #cddbef;
   border-radius: 2px;
 }
-
 .form [type='submit'] {
   opacity: 0;
   display: block;
@@ -722,24 +666,38 @@ body {
   border: none;
   transition: all 0.3s ease-out;
 }
-
 .form-wrapper.is-active .form [type='submit'] {
   opacity: 1;
   transform: translateX(0);
   transition: all 0.4s ease-in;
 }
-
 .btn-login {
   color: #fbfdff;
   background: #a7e245;
   transform: translateX(-30%);
 }
-
 .btn-signup {
   color: #a7e245;
   background: #fbfdff;
   box-shadow: inset 0 0 0 2px #a7e245;
   transform: translateX(30%);
+}
+
+/* Footer */
+footer {
+  background: var(--black);
+  padding: 15px 23px;
+  text-align: center;
+}
+footer span {
+  color: var(--white);
+}
+footer span a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+footer span a:hover {
+  text-decoration: underline;
 }
 
 /* Media query */
