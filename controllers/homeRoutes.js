@@ -7,9 +7,8 @@ router.get('/', async (req, res) => {
     const language = await Language.findAll({
       raw: true,
     });
-    res.render('language', { language });
+    res.render('homepage', { language });
   } catch (error) {
-    ç;
     res.status(500).json(error);
   }
 });
