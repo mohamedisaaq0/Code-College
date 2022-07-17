@@ -172,7 +172,7 @@ section .title::after {
 /* Home section */
 .home {
   display: flex;
-  background: url('/public/assets/images/banner.jpeg') no-repeat center;
+  background: url('../images/banner.jpeg') no-repeat center;
   height: 100vh;
   color: var(--white);
   min-height: 500px;
