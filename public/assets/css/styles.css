@@ -700,6 +700,30 @@ footer span a:hover {
   text-decoration: underline;
 }
 
+/* Languages HTML */
+.modules h1 {
+  text-align: center;
+  color: var(--blue);
+  padding-top: 100px;
+  padding-bottom: 25px;
+  text-decoration: underline;
+}
+
+.modules fieldset {
+  color: var(--black);
+  padding: 25px;
+  width: 50%;
+}
+.modules legend {
+  text-align: center;
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.modules div {
+  padding-bottom: 10px;
+}
+
 /* Media query */
 @media (max-width: 1104px) {
   .about .about-content .left img {
