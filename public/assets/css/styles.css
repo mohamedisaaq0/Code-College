@@ -271,6 +271,7 @@ section .title::after {
 }
 .languages .title {
   color: var(--white);
+  padding-top: 50px;
 }
 .languages .title::before {
   background: var(--white) f;
