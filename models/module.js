@@ -11,7 +11,7 @@ Module.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -22,12 +22,14 @@ Module.init(
 
     languageId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      references: {
+        model: 'language',
+        key: 'id',
+      },
     },
   },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'module',
