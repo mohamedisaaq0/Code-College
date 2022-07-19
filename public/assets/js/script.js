@@ -1,3 +1,9 @@
+const hmtlContainer = document.querySelector('.html');
+const cssContainer = document.querySelector('.CSS');
+const jsContainer = document.querySelector('.Javascript');
+const expressContainer = document.querySelector('.Express.js');
+const sqlContainer = document.querySelector('.SQL');
+
 $(document).ready(function () {
   $(window).scroll(function () {
     // Sticky navbar
@@ -26,13 +32,6 @@ $(document).ready(function () {
   $('.menu-btn').click(function () {
     $('.navbar .menu').toggleClass('active');
     $('.menu-btn i').toggleClass('active');
-  });
-
-  new Typed('.typing', {
-    strings: ['HTML', 'CSS', 'JavaScript', 'Express.js', 'SQL'],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
   });
 
   new Typed('.typing-2', {
@@ -67,6 +66,31 @@ $(document).ready(function () {
       },
     },
   });
+});
+
+hmtlContainer.addEventListener('click', function () {
+  document.location.replace('/language/html/module');
+  console.log('html');
+});
+
+cssContainer.addEventListener('click', function () {
+  // document.location.replace('/language/css/module');
+  console.log('css');
+});
+
+jsContainer.addEventListener('click', function () {
+  // document.location.replace('/language/javascript/module');
+  console.log('javascript');
+});
+
+expressContainer.addEventListener('click', function () {
+  // document.location.replace('/language/express/module');
+  console.log('express');
+});
+
+sqlContainer.addEventListener('click', function () {
+  // document.location.replace('/language/sql/module');
+  console.log('sql');
 });
 
 const switchers = [...document.querySelectorAll('.switcher')];
