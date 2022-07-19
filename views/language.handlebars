@@ -1,0 +1,21 @@
+<section class='languages' id='languages'>
+  <div class='max-width'>
+    <h2 class='title'>Languages</h2>
+    <div class='carousel owl-carousel owl-loaded owl-drag'>
+      {{#each language}}
+        <div class='owl-stage-outer'>>
+          <div
+            class='class="owl-item cloned" style="width: 344px; margin-right: 20px;"'
+          >
+            <div class='card'>
+              <div class='box'>
+                <img src='./assets/images/logos/{{img}}' alt={{name}} />
+                <div class='text'>{{name}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
