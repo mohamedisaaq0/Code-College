@@ -20,6 +20,11 @@ Language.init(
       allowNull: false,
       unique: true,
     },
+    img: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
     UserId: {
       type: DataTypes.INTEGER,
       allowNull: false,
