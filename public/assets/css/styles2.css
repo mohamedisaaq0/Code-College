@@ -1,0 +1,129 @@
+p{
+    color: #eee;
+    text-align: centre;
+   
+}
+
+.text{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.sub{
+    color: var(--yellow);
+    font-size: 20px;
+
+}
+
+/* The container */
+
+.container2 {
+    width: 50%;
+    margin:auto;
+    /*this is the general left margin*/
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  /* Hide the browser's default checkbox */
+  
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    background-color: #eee;
+  }
+  
+  
+  /* On mouse-over, add a grey background color */
+  
+.container:hover input~.checkmark {
+    background-color: #ccc;
+  }
+  
+  
+  /* When the checkbox is checked, add a green background */
+  
+.container input:checked~.checkmark {
+    background-color: darkgreen;
+  }
+
+/* label when unchecked */
+
+.checklabel {
+    background: red;
+    color: white;
+    padding: 5px 20px;
+  }
+  
+.tit{
+      position: relative;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 500;
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+      color:white;
+      font-family: 'Ubuntu', sans-serif;
+  }
+  
+  /* label when checked */
+  
+.container input:checked~.checklabel {
+    text-decoration: line-through;
+    background: green;
+    color: white;
+    padding: 5px 20px;
+  }
+  
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  /* Show the checkmark when checked */
+  
+.container input:checked~.checkmark:after {
+    display: block;
+    top: 10px;
+    left: 15px
+  }
+  
+  
+  /* Style the checkmark/indicator */
+  
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
