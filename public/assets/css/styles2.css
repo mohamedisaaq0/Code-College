@@ -41,3 +41,28 @@ p{
     opacity: 0;
     cursor: pointer;
   }
+
+  /* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    background-color: #eee;
+  }
+  
+  
+  /* On mouse-over, add a grey background color */
+  
+  .container:hover input~.checkmark {
+    background-color: #ccc;
+  }
+  
+  
+  /* When the checkbox is checked, add a green background */
+  
+  .container input:checked~.checkmark {
+    background-color: darkgreen;
+  }
