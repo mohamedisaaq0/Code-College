@@ -69,27 +69,27 @@ $(document).ready(function () {
 });
 
 hmtlContainer.addEventListener('click', function () {
-  document.location.replace('/language/html/module');
+  document.location.replace('/language/1/module');
   console.log('html');
 });
 
 cssContainer.addEventListener('click', function () {
-  // document.location.replace('/language/css/module');
+  document.location.replace('/language/5/module');
   console.log('css');
 });
 
 jsContainer.addEventListener('click', function () {
-  // document.location.replace('/language/javascript/module');
+  document.location.replace('/language/2/module');
   console.log('javascript');
 });
 
 expressContainer.addEventListener('click', function () {
-  // document.location.replace('/language/express/module');
+  document.location.replace('/language/3/module');
   console.log('express');
 });
 
 sqlContainer.addEventListener('click', function () {
-  // document.location.replace('/language/sql/module');
+  document.location.replace('/language/4/module');
   console.log('sql');
 });
 
