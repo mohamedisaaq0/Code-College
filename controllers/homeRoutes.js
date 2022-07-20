@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Language } = require('../models');
+const { Language, Module } = require('../models');
 //const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -20,20 +20,22 @@ router.get('/language', async (req, res) => {
   }
 });
 
-// router.get('/module', withAuth, async (req, res) => {
-//   if (req.session.logged_in) {
-//     const module = await Module.findAll({
-//       where: {
-//         user_id: req.session.user_id,
-//       },
-//       raw: true,
-//     });
-
-//     console.log('modules', module);
-//     res.render('module', { module });
-//   } else {
-//     res.redirect('/login');
-//   }
-// });
-
+router.get('/language/:id/module', async (req, res) => {
+  // res.send('its working');
+  try {
+    const languageModule = await Language.findByPk(req.params.id, {
+      include: [
+        {
+          model: Module,
+          attributes: ['id', 'name', 'progress'],
+        },
+      ],
+    });
+    const oneLanguage = languageModule.get({ plain: true });
+    res.render('module', { oneLanguage });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 module.exports = router;
