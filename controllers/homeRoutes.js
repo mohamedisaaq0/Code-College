@@ -31,8 +31,9 @@ router.get('/language/:id/module', async (req, res) => {
         },
       ],
     });
-    const oneLanguage = languageModule.get({ plain: true });
-    res.render('module', { oneLanguage });
+    const language = languageModule.get({ plain: true });
+    console.log(language);
+    res.render('module', { language });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
