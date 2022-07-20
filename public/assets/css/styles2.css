@@ -1,0 +1,16 @@
+p{
+    color: #eee;
+    text-align: centre;
+   
+}
+
+.text{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.sub{
+    color: var(--yellow);
+    font-size: 20px;
+
+}
