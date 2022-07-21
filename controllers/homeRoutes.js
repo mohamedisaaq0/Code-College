@@ -14,14 +14,8 @@ router.get('/profile', (req, res) => {
   res.send('profile');
 });
 
-router.get('/language', async (req, res) => {
-  try {
-    const language = await Language.findAll({ raw: true });
-
-    res.render('language', { language });
-  } catch (error) {
-    res.status(500).json(error);
-  }
+router.get('/module', (req, res) => {
+  res.render('module');
 });
 
 router.get('/language/:id', async (req, res) => {
@@ -37,10 +31,21 @@ router.get('/language/:id', async (req, res) => {
     });
     const language = languageModule.get({ plain: true });
     console.log(language);
-    res.render('module', { language });
+    res.render('module');
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+router.get('/language', async (req, res) => {
+  try {
+    const language = await Language.findAll({ raw: true });
+
+    res.render('language', { language });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 module.exports = router;
