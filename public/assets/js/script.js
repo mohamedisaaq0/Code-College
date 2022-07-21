@@ -80,3 +80,34 @@ switchers.forEach((item) => {
     this.parentElement.classList.add('is-active');
   });
 });
+
+const hmtlContainer = document.querySelector('.html');
+const cssContainer = document.querySelector('.CSS');
+const jsContainer = document.querySelector('.Javascript');
+const expressContainer = document.querySelector('.Express.js');
+const sqlContainer = document.querySelector('.SQL');
+
+hmtlContainer.addEventListener('click', function () {
+  document.location.replace('/language/html/module');
+  console.log('html');
+});
+
+cssContainer.addEventListener('click', function () {
+  document.location.replace('/language/css/module');
+  console.log('css');
+});
+
+jsContainer.addEventListener('click', function () {
+  document.location.replace('/language/javascript/module');
+  console.log('javascript');
+});
+
+expressContainer.addEventListener('click', function () {
+  document.location.replace('/language/express/module');
+  console.log('express');
+});
+
+sqlContainer.addEventListener('click', function () {
+  document.location.replace('/language/sql/module');
+  console.log('sql');
+});
