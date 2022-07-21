@@ -1,0 +1,37 @@
+:root {
+  --white: #ffffff;
+  --yellow: #fbff00;
+  --black: #000;
+  --lightgrey: #888;
+  --darkgrey: #555;
+  --blue: #080cff;
+  --pink: #ff08de;
+}
+body {
+  background: var(--blue);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--blue);
+}
+
+.profile-button {
+  background: var(--black);
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover {
+  background: var(--blue);
+}
+
+.profile-button:active {
+  color: var(--black);
+  background: var(--yellow);
+  box-shadow: none;
+}
+
+.labels {
+  font-size: 11px;
+}
