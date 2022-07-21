@@ -10,6 +10,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/profile', (req, res) => {
+  res.send('profile');
+});
+
 router.get('/language', async (req, res) => {
   try {
     const language = await Language.findAll({ raw: true });
@@ -20,7 +24,7 @@ router.get('/language', async (req, res) => {
   }
 });
 
-router.get('/language/:id/module', async (req, res) => {
+router.get('/language/:id', async (req, res) => {
   // res.send('its working');
   try {
     const languageModule = await Language.findByPk(req.params.id, {
