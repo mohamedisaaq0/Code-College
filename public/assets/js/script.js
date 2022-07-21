@@ -69,6 +69,7 @@ $(document).ready(function () {
   });
 });
 
+// Login
 const switchers = [...document.querySelectorAll('.switcher')];
 
 switchers.forEach((item) => {
