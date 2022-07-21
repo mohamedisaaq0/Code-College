@@ -8,13 +8,13 @@ const languageData = [
     img: 'html.webp',
   },
   {
-    name: 'Javascript',
+    name: 'JavaScript',
     description:
       'JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web',
     img: 'js.png',
   },
   {
-    name: 'Express.js',
+    name: 'Express.JS',
     description:
       'Express.js, or simply Express, is a back end web application framework for Node.js',
     img: 'express.png',

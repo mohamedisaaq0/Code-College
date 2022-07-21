@@ -1,3 +1,9 @@
+const hmtlContainer = document.querySelector('.html');
+const cssContainer = document.querySelector('.CSS');
+const jsContainer = document.querySelector('.Javascript');
+const expressContainer = document.querySelector('.Express.js');
+const sqlContainer = document.querySelector('.SQL');
+
 $(document).ready(function () {
   $(window).scroll(function () {
     // Sticky navbar
@@ -26,13 +32,6 @@ $(document).ready(function () {
   $('.menu-btn').click(function () {
     $('.navbar .menu').toggleClass('active');
     $('.menu-btn i').toggleClass('active');
-  });
-
-  new Typed('.typing', {
-    strings: ['HTML', 'CSS', 'JavaScript', 'Express.js', 'SQL'],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
   });
 
   new Typed('.typing-2', {
@@ -69,7 +68,7 @@ $(document).ready(function () {
   });
 });
 
-// Login
+
 const switchers = [...document.querySelectorAll('.switcher')];
 
 switchers.forEach((item) => {
