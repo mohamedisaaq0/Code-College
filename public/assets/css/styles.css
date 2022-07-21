@@ -869,7 +869,12 @@ body {
 }
 
 .labels {
-  font-size: 11px;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+h4 {
+  text-decoration: underline;
 }
 
 /* Media query */
