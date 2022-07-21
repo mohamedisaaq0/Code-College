@@ -4,4 +4,11 @@
   {{language.description}}
   <img src='./assets/images/logos/{{language.img}}' />
 
+  {{#each language.modules as |module|}}
+    <div>
+      {{module.name}}
+      {{module.progress}}
+    </div>
+  {{/each}}
+
 </section>
