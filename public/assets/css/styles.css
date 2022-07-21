@@ -841,6 +841,36 @@ body {
   transform: translateX(30%);
 }
 
+/* Profile HTML */
+body {
+  background: var(--blue);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--blue);
+}
+
+.profile-button {
+  background: var(--black);
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover {
+  background: var(--blue);
+}
+
+.profile-button:active {
+  color: var(--black);
+  background: var(--yellow);
+  box-shadow: none;
+}
+
+.labels {
+  font-size: 11px;
+}
+
 /* Media query */
 @media (max-width: 1104px) {
   .about .about-content .left img {
