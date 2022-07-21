@@ -13,7 +13,7 @@ router.get('/login', (req, res) => {
 router.get('/language', async (req, res) => {
   try {
     const language = await Language.findAll({ raw: true });
-    console.log(language);
+
     res.render('language', { language });
   } catch (error) {
     res.status(500).json(error);
