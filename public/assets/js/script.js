@@ -68,6 +68,30 @@ $(document).ready(function () {
   });
 });
 
+hmtlContainer.addEventListener('click', function () {
+  document.location.replace('/language/html/module');
+  console.log('html');
+});
+
+cssContainer.addEventListener('click', function () {
+  document.location.replace('/language/css/module');
+  console.log('css');
+});
+
+jsContainer.addEventListener('click', function () {
+  document.location.replace('/language/javascript/module');
+  console.log('javascript');
+});
+
+expressContainer.addEventListener('click', function () {
+  document.location.replace('/language/express/module');
+  console.log('express');
+});
+
+sqlContainer.addEventListener('click', function () {
+  document.location.replace('/language/sql/module');
+  console.log('sql');
+});
 
 const switchers = [...document.querySelectorAll('.switcher')];
 
