@@ -40,11 +40,11 @@
         <li><a href='/#about' class='menu-btn'>About Code College</a></li>
         <li><a href='/language' class='menu-btn'>Languages</a></li>
         <li><a href='/#contributors' class='menu-btn'>Contributors</a></li>
-        {{#if logged_in}}
-          <li><a href='/logout' class='menu-btn'>Logout</a></li>
+        {{#if req.session.logged_in}}
           <li><a href='/profile' class='menu-btn'>Profile</a></li>
+          <li><a href='/logout' class='menu-btn' id='logout'>Logout</a></li>
         {{else}}
-          <li><a href='/login' class='menu-btn'>Register / Login</a></li>
+          <li><a href='/login' class='menu-btn' id='logout'>Register / Login</a></li>
         {{/if}}
       </ul>
       <div class='menu-btn'>

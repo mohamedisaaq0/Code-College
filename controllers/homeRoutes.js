@@ -6,10 +6,6 @@ router.get('/', async (req, res) => {
   res.render('homepage');
 });
 
-router.get('/login', (req, res) => {
-  res.render('login');
-});
-
 router.get('/profile', (req, res) => {
   res.send('profile');
 });
@@ -27,11 +23,20 @@ router.get('/language/:id', withAuth, async (req, res) => {
     });
     const language = languageModule.get({ plain: true });
     console.log(language);
-    res.render('language', { language });
+    res.render('language', { language, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
+});
+
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
 });
 
 router.get('/language', async (req, res) => {
