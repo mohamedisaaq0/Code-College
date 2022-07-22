@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Language, Module } = require('../models');
-//const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   res.render('homepage');
@@ -10,17 +10,11 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/language', async (req, res) => {
-  try {
-    const language = await Language.findAll({ raw: true });
-
-    res.render('language', { language });
-  } catch (error) {
-    res.status(500).json(error);
-  }
+router.get('/profile', (req, res) => {
+  res.send('profile');
 });
 
-router.get('/language/:id/module', async (req, res) => {
+router.get('/language/:id', withAuth, async (req, res) => {
   // res.send('its working');
   try {
     const languageModule = await Language.findByPk(req.params.id, {
@@ -33,10 +27,21 @@ router.get('/language/:id/module', async (req, res) => {
     });
     const language = languageModule.get({ plain: true });
     console.log(language);
-    res.render('module', { language });
+    res.render('language', { language });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+router.get('/language', async (req, res) => {
+  try {
+    const language = await Language.findAll({ raw: true });
+
+    res.render('languages', { language });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 module.exports = router;
