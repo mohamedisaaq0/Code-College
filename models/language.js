@@ -27,7 +27,6 @@ Language.init(
 
     UserId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
   },
   {
