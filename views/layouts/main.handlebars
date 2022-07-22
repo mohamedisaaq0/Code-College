@@ -37,11 +37,15 @@
         <a href='/'>Code<span>College</span></a>
       </div>
       <ul class='menu'>
-        <li><a href='/' class='menu-btn'>Home</a></li>
         <li><a href='/#about' class='menu-btn'>About Code College</a></li>
         <li><a href='/language' class='menu-btn'>Languages</a></li>
         <li><a href='/#contributors' class='menu-btn'>Contributors</a></li>
-        <li><a href='/login' class='menu-btn'>Register / Login</a></li>
+        {{#if logged_in}}
+          <li><a href='/logout' class='menu-btn'>Logout</a></li>
+          <li><a href='/profile' class='menu-btn'>Profile</a></li>
+        {{else}}
+          <li><a href='/login' class='menu-btn'>Register / Login</a></li>
+        {{/if}}
       </ul>
       <div class='menu-btn'>
         <i class='fas fa-bars'></i>
