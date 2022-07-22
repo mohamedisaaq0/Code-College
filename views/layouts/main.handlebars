@@ -39,8 +39,13 @@
           <li><a href='/#about' class='menu-btn'>About Code College</a></li>
           <li><a href='/language' class='menu-btn'>Languages</a></li>
           <li><a href='/#contributors' class='menu-btn'>Contributors</a></li>
-          <li><a href='/login' class='menu-btn'>Register / Login</a></li>
-
+          {{#if logged_in}}
+            <li><a href='/profile' class='menu-btn'>Profile</a></li>
+            <li><a href='/logout' class='menu-btn' id='logout'>Logout</a></li>
+          {{else}}
+            <li><a href='/login' class='menu-btn' id='logout'>Register / Login</a></li>
+            <li><a href='/login' class='menu-btn'>Register / Login</a></li>
+          {{/if}}
         </ul>
         <div class='menu-btn'>
           <i class='fas fa-bars'></i>
@@ -58,5 +63,8 @@
         2022 All rights reserved.</span>
     </footer>
     <script src='./assets/js/script.js'></script>
+    {{#if logged_in}}
+      <script src='./assets/js/logout.js'></script>
+    {{/if}}
   </body>
 </html>
