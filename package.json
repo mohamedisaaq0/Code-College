@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "seed": "node seeds/seed.js",
-    "prepare": "husky install && chmod ug+x .husky/* && chmod ug+x .git/hooks/*",
+    "seed": "node seeds/index.js",
+    "dev-prepare": "husky install && chmod ug+x .husky/* && chmod ug+x .git/hooks/*",
     "lint": "eslint \"**/*.js\"",
     "lint-fix": "eslint --fix \"**/*.js\"",
     "precommit": "npm run lint-fix && git add .",
