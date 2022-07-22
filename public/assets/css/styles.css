@@ -992,26 +992,27 @@ body {
 
 .description {
   color: #eee;
-  text-align: centre;
+  font-size: 30px;
+  text-align: center;
 }
 
 .text {
-  text-align: center;
   padding-bottom: 30px;
+  padding-left: 40px;
 }
 
 .sub {
   color: var(--yellow);
-  font-size: 20px;
+  font-size: 30px;
+  text-decoration: underline solid 2px var(--yellow);
+  padding-left: 15px;
 }
 
 .container2 {
-  width: 50%;
-  margin: auto;
   /*this is the general left margin*/
   display: block;
   position: relative;
-  padding-left: 40px;
+  padding-left: 90px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -1033,8 +1034,8 @@ body {
 
 .checkmark {
   position: absolute;
-  top: -5px;
-  left: 0;
+  top: -1px;
+  left: 50px;
   height: 35px;
   width: 35px;
   background-color: #eee;
@@ -1063,11 +1064,11 @@ body {
 .tit {
   position: relative;
   text-align: center;
-  font-size: 40px;
+  font-size: 100px;
   font-weight: 500;
   margin-bottom: 60px;
-  padding-bottom: 20px;
-  color: white;
+  padding-bottom: px;
+  color: yellow;
   font-family: 'Ubuntu', sans-serif;
 }
 
