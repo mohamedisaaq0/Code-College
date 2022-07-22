@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Language, Module } = require('../models');
-//const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   res.render('homepage');
@@ -14,7 +14,7 @@ router.get('/profile', (req, res) => {
   res.send('profile');
 });
 
-router.get('/language/:id', async (req, res) => {
+router.get('/language/:id', withAuth, async (req, res) => {
   // res.send('its working');
   try {
     const languageModule = await Language.findByPk(req.params.id, {

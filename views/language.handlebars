@@ -1,23 +1,23 @@
-<section class='languages' id='languages'>
-  <div class='max-width'>
-    <h2 class='title'>Languages</h2>
-    <div class='carousel owl-carousel owl-loaded owl-drag'>
-      {{#each language}}
-        <a href='/language/{{id}}'>
-          <div class='owl-stage-outer'><br />
-            <div
-              class='class="owl-item cloned" style="width: 344px; margin-right: 20px;"'
-            >
-              <div class='card {{name}}'>
-                <div class='box'>
-                  <img src='./assets/images/logos/{{img}}' alt={{name}} />
-                  <div class='text'>{{name}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      {{/each}}
-    </div>
+<section class='languages'>
+
+  <div class='text'>
+    <h1 class='tit'>{{language.name}}</h1>
+
+    <p class='description'>
+      {{language.description}}
+    </p><br />
+    <h2 class='sub'>Modules</h2>
   </div>
+
+  {{#each language.modules as |module|}}
+    <div id='item-list'>
+      <label class='container2'>
+        <input type='checkbox' unchecked='checked' />
+        <span class='checkmark'></span>
+        <span class='checklabel'>{{module.name}}
+        </span>
+      </label>
+    </div>
+  {{/each}}
+
 </section>
