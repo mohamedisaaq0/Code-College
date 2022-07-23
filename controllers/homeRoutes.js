@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/profile', (req, res) => {
-  res.send('profile');
+  res.render('profile');
 });
 
 router.get('/language/:id', withAuth, async (req, res) => {
@@ -23,7 +23,7 @@ router.get('/language/:id', withAuth, async (req, res) => {
     });
     const language = languageModule.get({ plain: true });
     console.log(language);
-    res.render('language', { language, logged_in: req.session.logged_in });
+    res.render('language', { language });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
