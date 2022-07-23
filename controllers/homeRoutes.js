@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   res.render('homepage', { logged_in });
 });
 
-router.get('/profile', (req, res) => {
+router.get('/profile', withAuth, (req, res) => {
   res.render('profile');
 });
 
