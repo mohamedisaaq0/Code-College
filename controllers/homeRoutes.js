@@ -3,7 +3,8 @@ const { Language, Module } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  res.render('homepage');
+  let logged_in = req.session.logged_in;
+  res.render('homepage', { logged_in });
 });
 
 router.get('/profile', (req, res) => {
@@ -23,7 +24,7 @@ router.get('/language/:id', withAuth, async (req, res) => {
     });
     const language = languageModule.get({ plain: true });
     console.log(language);
-    res.render('language', { language });
+    res.render('language', { language, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
